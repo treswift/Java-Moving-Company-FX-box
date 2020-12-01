@@ -57,8 +57,9 @@ public class User {
     }
     private String email = "";
     private String phone = "";
-    //private boolean subscribed;
+    private boolean subscribed;
     private String address = "";
+    private String items = "";
 
     /**
      * @return the email
@@ -87,20 +88,33 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    /**
+     * @return the items
+     */
+    public String getItems() {
+        return items;
+    }
+
+    /**
+     * @param items the items to set
+     */
+    public void setItems(String items) {
+        this.items = items;
+    }
 
     /**
      * @return the subscribed
-    
+    */
     public boolean isSubscribed() {
         return subscribed;
-    }*/
-
+    }
+    
     /**
      * @param subscribed the subscribed to set
-    
+    */
     public void setSubscribed(boolean subscribed) {
         this.subscribed = subscribed;
-    } */
+    } 
 
     /**
      * @return the address
