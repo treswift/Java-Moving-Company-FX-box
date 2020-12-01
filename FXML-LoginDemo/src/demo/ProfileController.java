@@ -76,11 +76,11 @@ public class ProfileController extends AnchorPane implements Initializable {
         user.setText(loggedUser.getId());
         email.setText(loggedUser.getEmail());
         phone.setText(loggedUser.getPhone());
-        if (loggedUser.getItems() != null) {
-            items.setText(loggedUser.getItems());
-        } 
         if (loggedUser.getAddress() != null) {
             address.setText(loggedUser.getAddress());
+        }
+        if (loggedUser.getItems() != null) {
+            items.setText(loggedUser.getItems());
         }
         subscribed.setSelected(loggedUser.isSubscribed());
         success.setOpacity(0);
@@ -110,9 +110,9 @@ public class ProfileController extends AnchorPane implements Initializable {
         User loggedUser = application.getLoggedUser();
         loggedUser.setEmail(email.getText());
         loggedUser.setPhone(phone.getText());
-        loggedUser.setItems(items.getText());
         loggedUser.setSubscribed(subscribed.isSelected());
         loggedUser.setAddress(address.getText());
+        loggedUser.setItems(items.getText());
         animateMessage();
     }
     
