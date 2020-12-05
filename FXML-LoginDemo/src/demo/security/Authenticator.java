@@ -39,6 +39,10 @@ public class Authenticator {
     static {
         USERS.put("new", "new");
     }
+    private static final Map<String, String> ADMIN = new HashMap<String, String>();
+    static {
+        ADMIN.put("Admin", "root");
+    }
     public static boolean validate(String user, String password){
         String validUserPassword = USERS.get(user);
         return validUserPassword != null && validUserPassword.equals(password);
